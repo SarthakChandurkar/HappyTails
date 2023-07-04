@@ -45,7 +45,9 @@ app.get("/contact", (req, res) => {
 app.get("/chatbot", (req, res) => {
     res.sendFile(path.join(__dirname,"..","public","chatbot.html"));
 })
-
+app.get("/products", (req, res) => {
+    res.render("products");
+})
 
 
 app.get("/breed/german", (req, res) => {
