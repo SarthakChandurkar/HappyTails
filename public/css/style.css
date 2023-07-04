@@ -51,9 +51,9 @@ margin-left:2rem;
 .card-text {
   grid-area: text;
 }
-.card-stats {
+/* .card-stats {
   /* grid-area: stats;  */
-}
+/*  */
 .card-image {
   grid-area: image;
   border-top-left-radius: 15px;
@@ -74,28 +74,25 @@ margin-left:2rem;
   margin-top:0px;
   font-size:28px;
 }
-.card-stats {
-  /* grid-area: stats; 
-  display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-template-rows: 1fr; */
 
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-  /* background: rgb(250, 62, 140); */
-}
-.stats:hover{
-  background:  rgb(126, 4, 48);
-  /* border-bottom-right-radius: 15px;  */
-}
 
-.card-stats .stat {
+.card-stats .stat button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 14px;
+  /* margin: 10px; */
+  width: 300px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-color: rgb(163, 91, 91);
+  background-color: rgb(163, 91, 91);
+}
+.stat button:hover{
+  background-color: rgb(110, 110, 196);
 }
 .card:hover {
   transform: scale(1.15);
