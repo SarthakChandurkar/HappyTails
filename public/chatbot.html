@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="icon" href="img/logo.webp">
 
+    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Happy Tails! | Contact Us</title>
   </head>
@@ -55,7 +56,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="chatbot">Chatbot</a>
+                <a class="nav-link" href="blog">Blog</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="services" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Organisation</a>
@@ -79,133 +80,19 @@
     </header>
     <!-- END header -->
     
-    <section class="home-slider inner-page owl-carousel">
-      <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
-        
-        <div class="container">
-          <div class="row slider-text align-items-center justify-content-center">
-            <div class="col-md-8 text-center col-sm-12 element-animate">
-              <h1>Contact Us</h1>
-              <p class="mb-5">Need Something? While we’re good with smoke signals,
-                   there are simpler ways for us to get in touch, and answer your questions.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
     <!-- END slider -->
 
     <section class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-5 order-2">
-            <form action="#" method="post">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="phone">Phone</label>
-                  <input type="number" id="phone" class="form-control ">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control ">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="message">Write Message</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-md-6 order-2 mb-5">
-            <div class="row justify-content-right">
-              <div class="col-md-8 mx-auto contact-form-contact-info">
-                <p class="d-flex">
-                  <span class="ion-ios-location icon mr-5"></span>
-                  <span>34-Golf Course, New Delhi, India</span>
-                </p>
-
-                <p class="d-flex">
-                  <span class="ion-ios-telephone icon mr-5"></span>
-                  <span>+91 123 456 789</span>
-                </p>
-
-                <p class="d-flex">
-                  <span class="ion-android-mail icon mr-5"></span>
-                  <span>info@Happy Tails!.com</span>
-                </p>
-              </div>
+        <div id="container" class="container">
+            <div id="chat" class="chat">
+                <div id="messages" class="messages"></div>
+                <input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <section class="section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-8 text-center">
-            <h2 class="text-uppercase heading mb-4">Testimonial</h2>
-            <p class="mb-5 lead">'A collected poems' is either a gravestone or a testimonial to survival.</p>
-          </div>
-        </div>
-        <div class="row element-animate">
-          <div class="major-caousel js-carousel-1 owl-carousel">
-            <div>
-              <div class="media d-block media-custom text-center">
-                <a href="adoption-single"><img src="img/person_5.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                  <h3 class="mt-0 text-black">Anubhav Sinha <em>says...</em></h3>
-                  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus molestiae dicta maxime tempore tenetur, dolores officia, sed laudantium repellendus distinctio rem unde dolorum fugiat eum doloremque, numquam fuga autem nisi.&ldquo;</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="media d-block media-custom text-center">
-                <a href="adoption-single"><img src="img/person_4.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                  <h3 class="mt-0 text-black">Ranjit Bam <em>says...</em></h3>
-                  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus molestiae dicta maxime tempore tenetur, dolores officia, sed laudantium repellendus distinctio rem unde dolorum fugiat eum doloremque, numquam fuga autem nisi.&ldquo;</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="media d-block media-custom text-center">
-                <a href="adoption-single"><img src="img/person_6.jpg" alt="Image Placeholder" class="img-fluid"></a>
-                <div class="media-body">
-                  <h3 class="mt-0 text-black">Laura Smith <em>says...</em></h3>
-                  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus molestiae dicta maxime tempore tenetur, dolores officia, sed laudantium repellendus distinctio rem unde dolorum fugiat eum doloremque, numquam fuga autem nisi.&ldquo;</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- END slider -->
-        </div>
-      </div>
+	      </div>
     </section>
     <!-- END section -->
 
-    {{>footer}}
-    {{!-- <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4 mb-5">
@@ -261,5 +148,9 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
-  </body> --}}
+
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/speech.js"></script>
+  <script type="text/javascript" src="./js/constants.js" ></script>
 </html>
