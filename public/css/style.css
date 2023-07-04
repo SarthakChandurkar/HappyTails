@@ -52,7 +52,7 @@ margin-left:2rem;
   grid-area: text;
 }
 .card-stats {
-  grid-area: stats; 
+  /* grid-area: stats;  */
 }
 .card-image {
   grid-area: image;
@@ -75,10 +75,10 @@ margin-left:2rem;
   font-size:28px;
 }
 .card-stats {
-  grid-area: stats; 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  /* grid-area: stats; 
+  display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-rows: 1fr; */
 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -87,7 +87,7 @@ margin-left:2rem;
 }
 .stats:hover{
   background:  rgb(126, 4, 48);
-  border-bottom-right-radius: 15px; 
+  /* border-bottom-right-radius: 15px;  */
 }
 
 .card-stats .stat {

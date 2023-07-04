@@ -9,6 +9,8 @@ const Register = require("./models/registers")
 const hbs = require("hbs"); /* changes to be made */
 const bcrypt = require("bcrypt");
 
+const Razorpay = require('razorpay');
+
 
 const static_path = path.join(__dirname, "../public");
 const view_path = path.join(__dirname, "../templates/views");
@@ -153,6 +155,44 @@ app.get("*", (req, res) => {
 
 
 
-app.listen(port, () => {
+
+
+//razorpay
+
+const razorpayInstance = new Razorpay({
+    key_id:'rzp_test_TGr6TblEdcfhCA',
+    key_secret:'Pa51LspiROAfGiIb8J1oUohX',
+  });
+  
+  app.post('/create/orderId', (req, res) => {
+    console.log('Create orderId request', req.body);
+    const options = {
+      amount: req.body.amount,
+      currency: 'INR',
+      receipt: 'rcp1',
+    };
+    razorpayInstance.orders.create(options, (err, order) => {
+      console.log(order);
+      res.send({ orderId: order.id });
+    });
+  });
+  
+  app.post('/api/payment/verify', (req, res) => {
+    const body = req.body.response.razorpay_order_id + '|' + req.body.response.razorpay_payment_id;
+    const crypto = require('crypto');
+    const expectedSignature = crypto.createHmac('sha256', process.env.RAZORPAY_WEBHOOK_SECRET)
+      .update(body.toString())
+      .digest('hex');
+    console.log('Signature received:', req.body.response.razorpay_signature);
+    console.log('Signature generated:', expectedSignature);
+  
+    const response = { signatureIsValid: 'false' };
+    if (expectedSignature === req.body.response.razorpay_signature) {
+      response.signatureIsValid = 'true';
+    }
+    res.send(response);
+  });
+
+  app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
