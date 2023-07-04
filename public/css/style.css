@@ -116,7 +116,7 @@ margin-left:2rem;
   background-color: rgb(163, 91, 91);
 }
 .stat button:hover{
-  background-color: rgb(110, 110, 196);
+  background-color: rgb(82, 45, 45);
 }
 .card:hover {
   transform: scale(1.15);
