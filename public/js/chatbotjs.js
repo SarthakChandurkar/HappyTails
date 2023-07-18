@@ -19,20 +19,27 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (chatElement) => {
-    const API_URL = "https://chatgpt-gpt4-ai-chatbot.p.rapidapi.com/ask";
+    const API_URL = "https://robomatic-ai.p.rapidapi.com/api";
     const messageElement = chatElement.querySelector("p");
 
     // Define the properties and message for the API request
     const requestOptions = {
         method: 'POST',
-    	headers: {
-    		'content-type': 'application/json',
-    		'X-RapidAPI-Key': '924d823d97mshce38b1c7d9c21c8p12a6c9jsn8f2e9de6f4a8',
-    		'X-RapidAPI-Host': 'chatgpt-gpt4-ai-chatbot.p.rapidapi.com'
-    	},
-        body: {
-    		query: userMessage
-    	}
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Key': '924d823d97mshce38b1c7d9c21c8p12a6c9jsn8f2e9de6f4a8',
+            'X-RapidAPI-Host': 'robomatic-ai.p.rapidapi.com'
+        },
+        body: new URLSearchParams({
+            in: userMessage,
+            op: 'in',
+            cbot: '1',
+            SessionID: 'RapidAPI1',
+            cbid: '1',
+            key: 'RHMN5hnQ4wTYZBGCF3dfxzypt68rVP',
+            ChatSource: 'RapidAPI',
+            duration: '1'
+        })
     };
     // const requestOptions = {
     //     method: "POST",
@@ -49,8 +56,8 @@ const generateResponse = (chatElement) => {
     // Send POST request to API, get response and set the reponse as paragraph text
     fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
         console.log(data);
-        messageElement.textContent = data.response.trim();
-        textToSpeech(data.response)
+        messageElement.textContent = data.out.trim();
+        textToSpeech(data.out)
     }).catch(() => {
         messageElement.classList.add("error");
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
